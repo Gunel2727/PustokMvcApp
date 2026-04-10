@@ -1,32 +1,37 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PustokMvcApp.Data;
 using PustokMvcApp.Models;
+using PustokMvcApp.ViewModels;
 
 namespace PustokMvcApp.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(PustokAppDbContext pustokAppDbContext)  : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+       
         public IActionResult Index()
         {
-            return View();
-        }
+            HomeVm homeVm = new HomeVm
+            {
+                Sliders = pustokAppDbContext.Sliders.ToList(),
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+                FeaturedBooks = pustokAppDbContext.Books
+           .Include(b => b.BookImages)
+           .Include(b => b.Authors)
+           .Where(b => b.IsFeatured).ToList(),
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+                NewBooks = pustokAppDbContext.Books
+           .Include(b => b.BookImages)
+           .Include(b => b.Authors)
+           .Where(b => b.IsNew).ToList(),
+                DiscountedBooks = pustokAppDbContext.Books
+           .Include(b => b.BookImages)
+           .Include(b => b.Authors)
+           .Where(b => b.DiscountPercent > 0).ToList()
+            };
+            return View(homeVm);
         }
     }
 }
