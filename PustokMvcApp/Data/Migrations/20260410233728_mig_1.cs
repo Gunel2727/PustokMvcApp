@@ -69,15 +69,14 @@ namespace PustokMvcApp.Data.Migrations
                     IsNew = table.Column<bool>(type: "bit", nullable: false),
                     MainImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HoverImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AuthorId = table.Column<int>(type: "int", nullable: false),
-                    AuthorsId = table.Column<int>(type: "int", nullable: false)
+                    AuthorId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Books", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Books_Authors_AuthorsId",
-                        column: x => x.AuthorsId,
+                        name: "FK_Books_Authors_AuthorId",
+                        column: x => x.AuthorId,
                         principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -133,9 +132,9 @@ namespace PustokMvcApp.Data.Migrations
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Books_AuthorsId",
+                name: "IX_Books_AuthorId",
                 table: "Books",
-                column: "AuthorsId");
+                column: "AuthorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BookTags_TagId",

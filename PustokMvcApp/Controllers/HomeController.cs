@@ -17,19 +17,20 @@ namespace PustokMvcApp.Controllers
                 Sliders = pustokAppDbContext.Sliders.ToList(),
 
                 FeaturedBooks = pustokAppDbContext.Books
-           .Include(b => b.BookImages)
-           .Include(b => b.Authors)
-           .Where(b => b.IsFeatured).ToList(),
+                .Include(b => b.BookImage)
+                .Include(b => b.Author)
+                .Where(b => b.IsFeatured).ToList(),
 
 
                 NewBooks = pustokAppDbContext.Books
-           .Include(b => b.BookImages)
-           .Include(b => b.Authors)
-           .Where(b => b.IsNew).ToList(),
+                .Include(b => b.BookImage)
+                .Include(b => b.Author)
+                .Where(b => b.IsNew).ToList(),
+
                 DiscountedBooks = pustokAppDbContext.Books
-           .Include(b => b.BookImages)
-           .Include(b => b.Authors)
-           .Where(b => b.DiscountPercent > 0).ToList()
+                .Include(b => b.BookImage)
+                .Include(b => b.Author)
+                .Where(b => b.DiscountPercent > 0).ToList()
             };
             return View(homeVm);
         }

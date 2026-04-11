@@ -7,9 +7,9 @@ namespace PustokMvcApp.Data
     {
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Book> Books { get; set; }
-        public DbSet<Authors> Authors { get; set; }
+        public DbSet<Author> Authors { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<BookTags> BookTags { get; set; }
+        public DbSet<BookTag> BookTags { get; set; }
         public DbSet<BookImage> BookImages { get; set; }
         public PustokAppDbContext(DbContextOptions<PustokAppDbContext> options) : base(options)
         {

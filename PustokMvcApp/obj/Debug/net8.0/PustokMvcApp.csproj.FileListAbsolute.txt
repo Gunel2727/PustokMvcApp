@@ -137,4 +137,4 @@ C:\Users\user\Desktop\PustokMvcApp\PustokMvcApp\obj\Debug\net8.0\refint\PustokMv
 C:\Users\user\Desktop\PustokMvcApp\PustokMvcApp\obj\Debug\net8.0\PustokMvcApp.pdb
 C:\Users\user\Desktop\PustokMvcApp\PustokMvcApp\obj\Debug\net8.0\PustokMvcApp.genruntimeconfig.cache
 C:\Users\user\Desktop\PustokMvcApp\PustokMvcApp\obj\Debug\net8.0\ref\PustokMvcApp.dll
-C:\Users\user\Desktop\PustokMvcApp\PustokMvcApp\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\user\Desktop\PustokMvcApp\PustokMvcApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

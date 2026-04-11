@@ -1,4 +1,5 @@
 ﻿using PustokMvcApp.Models.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PustokMvcApp.Models
 {
@@ -14,9 +15,10 @@ namespace PustokMvcApp.Models
         public bool IsNew { get; set; }
         public string MainImageUrl { get; set; }=null!;
         public string HoverImageUrl { get; set; }=null!;
+        [ForeignKey(nameof(Author))]
         public int AuthorId { get; set; }
-        public Authors Authors { get; set; } = null!;
-        public List<BookTags> BookTags { get; set; } = new();
-        public List<BookImage> BookImages { get; set; } = new();
+        public Author Author { get; set; } = null!;
+        public List<BookTag> BookTag { get; set; } = new();
+        public List<BookImage> BookImage { get; set; } = new();
     }
 }

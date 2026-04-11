@@ -8,8 +8,8 @@ namespace PustokMvcApp.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Book> builder)
         {
-           builder.HasMany(x=>x.BookImages)
-                .WithOne(x=>x.Books)
+           builder.HasMany(x=>x.BookImage)
+                .WithOne(x=>x.Book)
                 .HasForeignKey(x=>x.BookId)
                 .OnDelete(DeleteBehavior.Cascade);
            builder.Property(x=>x.Name).IsRequired().HasMaxLength(155);

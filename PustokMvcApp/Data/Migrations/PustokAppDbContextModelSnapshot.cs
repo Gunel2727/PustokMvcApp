@@ -21,7 +21,7 @@ namespace PustokMvcApp.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PustokMvcApp.Models.Authors", b =>
+            modelBuilder.Entity("PustokMvcApp.Models.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,9 +47,6 @@ namespace PustokMvcApp.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AuthorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AuthorsId")
                         .HasColumnType("int");
 
                     b.Property<string>("Code")
@@ -92,7 +89,7 @@ namespace PustokMvcApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorsId");
+                    b.HasIndex("AuthorId");
 
                     b.ToTable("Books");
                 });
@@ -119,7 +116,7 @@ namespace PustokMvcApp.Data.Migrations
                     b.ToTable("BookImages");
                 });
 
-            modelBuilder.Entity("PustokMvcApp.Models.BookTags", b =>
+            modelBuilder.Entity("PustokMvcApp.Models.BookTag", b =>
                 {
                     b.Property<int>("BookId")
                         .HasColumnType("int");
@@ -186,60 +183,60 @@ namespace PustokMvcApp.Data.Migrations
 
             modelBuilder.Entity("PustokMvcApp.Models.Book", b =>
                 {
-                    b.HasOne("PustokMvcApp.Models.Authors", "Authors")
+                    b.HasOne("PustokMvcApp.Models.Author", "Author")
                         .WithMany("Books")
-                        .HasForeignKey("AuthorsId")
+                        .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Authors");
+                    b.Navigation("Author");
                 });
 
             modelBuilder.Entity("PustokMvcApp.Models.BookImage", b =>
                 {
-                    b.HasOne("PustokMvcApp.Models.Book", "Books")
-                        .WithMany("BookImages")
+                    b.HasOne("PustokMvcApp.Models.Book", "Book")
+                        .WithMany("BookImage")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Books");
+                    b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("PustokMvcApp.Models.BookTags", b =>
+            modelBuilder.Entity("PustokMvcApp.Models.BookTag", b =>
                 {
-                    b.HasOne("PustokMvcApp.Models.Book", "Books")
-                        .WithMany("BookTags")
+                    b.HasOne("PustokMvcApp.Models.Book", "Book")
+                        .WithMany("BookTag")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PustokMvcApp.Models.Tag", "Tag")
-                        .WithMany("BookTags")
+                        .WithMany("BookTag")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Books");
+                    b.Navigation("Book");
 
                     b.Navigation("Tag");
                 });
 
-            modelBuilder.Entity("PustokMvcApp.Models.Authors", b =>
+            modelBuilder.Entity("PustokMvcApp.Models.Author", b =>
                 {
                     b.Navigation("Books");
                 });
 
             modelBuilder.Entity("PustokMvcApp.Models.Book", b =>
                 {
-                    b.Navigation("BookImages");
+                    b.Navigation("BookImage");
 
-                    b.Navigation("BookTags");
+                    b.Navigation("BookTag");
                 });
 
             modelBuilder.Entity("PustokMvcApp.Models.Tag", b =>
                 {
-                    b.Navigation("BookTags");
+                    b.Navigation("BookTag");
                 });
 #pragma warning restore 612, 618
         }

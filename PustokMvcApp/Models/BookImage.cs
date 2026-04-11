@@ -6,6 +6,6 @@ namespace PustokMvcApp.Models
     {
         public string ImageUrl { get; set; }=null!;
         public int BookId { get; set; }
-        public Book Books { get; set; } = null!;
+        public Book Book { get; set; } = null!;
     }
 }
