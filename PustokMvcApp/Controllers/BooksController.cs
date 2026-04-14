@@ -28,5 +28,18 @@ namespace PustokMvcApp.Controllers
             };
             return View(bookVm);
         }
+
+        public IActionResult BookModal(int id)
+        {
+            var book = pustokAppDbContext.Books
+                .Include(b => b.Author)
+                .Include(b => b.BookImage)
+                .Include(b => b.BookTag)
+                .ThenInclude(bt => bt.Tag)
+                .FirstOrDefault(b => b.Id == id);
+            if(book == null)
+                return NotFound();
+            return PartialView("_BookModalPartial", book);
+        }
     }
 }
