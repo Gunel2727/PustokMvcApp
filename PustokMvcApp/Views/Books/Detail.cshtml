@@ -77,7 +77,7 @@
                     <div class="price-block">
                         @if (Model.Book.DiscountPercent > 0)
                         {
-                            <span class="price-new">£@(Model.Book.Price-(Model.Book.Price*Model.Book.DiscountPercent))</span>
+                            <span class="price-new">£@(Model.Book.Price-(Model.Book.Price*Model.Book.DiscountPercent/100))</span>
                             <del class="price-old">£@Model.Book.Price</del>
                         }
                         else
