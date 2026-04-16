@@ -9,5 +9,10 @@ namespace PustokMvcApp.Models
         [MaxLength(30)]
         public string FullName { get; set; } = null!;
         public List<Book> Books { get; set; }  
+
+        public Author()
+        {
+            Books = new List<Book>();
+        }
     }
 }
