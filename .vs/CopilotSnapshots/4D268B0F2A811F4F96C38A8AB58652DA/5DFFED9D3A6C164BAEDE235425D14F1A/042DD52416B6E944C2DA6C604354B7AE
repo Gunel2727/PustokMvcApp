@@ -1,0 +1,15 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using PustokMvcApp.Data;
+
+namespace PustokMvcApp.Areas.Manage.Controllers
+{
+    [Area("Manage")]
+    public class AuthorController(PustokAppDbContext _context) : Controller
+    {
+        public IActionResult Index()
+        {
+            var authors = _context.Authors.ToList();
+            return View(authors);
+        }
+    }
+}

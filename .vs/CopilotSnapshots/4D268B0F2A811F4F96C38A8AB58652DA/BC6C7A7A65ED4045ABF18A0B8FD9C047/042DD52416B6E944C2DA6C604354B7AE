@@ -1,0 +1,130 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using PustokMvcApp.Data;
+using Microsoft.AspNetCore.Mvc;
+using PustokMvcApp.Models;
+
+namespace PustokMvcApp.Areas.Manage.Controllers
+{
+    [Area("Manage")]
+    public class AuthorController(PustokAppDbContext _context) : Controller
+    {
+        // GET: Manage/Author
+        public IActionResult Index()
+        {
+            var authors = _context.Authors.ToList();
+            return View(authors);
+        }
+
+        // GET: Manage/Author/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Manage/Author/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([Bind("FullName")] Author author)
+        {
+            if (ModelState.IsValid)
+            {
+                author.CreatedDate = DateTime.UtcNow;
+                _context.Authors.Add(author);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(author);
+        }
+
+        // GET: Manage/Author/Edit/5
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var author = _context.Authors.Find(id);
+            if (author == null)
+            {
+                return NotFound();
+            }
+            return View(author);
+        }
+
+        // POST: Manage/Author/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, [Bind("Id,FullName")] Author author)
+        {
+            if (id != author.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var existingAuthor = _context.Authors.Find(id);
+                    if (existingAuthor != null)
+                    {
+                        existingAuthor.FullName = author.FullName;
+                        existingAuthor.UpdatedDate = DateTime.UtcNow;
+                        _context.Update(existingAuthor);
+                        _context.SaveChanges();
+                    }
+                }
+                catch
+                {
+                    if (!AuthorExists(author.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(author);
+        }
+
+        // GET: Manage/Author/Delete/5
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var author = _context.Authors.Find(id);
+            if (author == null)
+            {
+                return NotFound();
+            }
+
+            return View(author);
+        }
+
+        // POST: Manage/Author/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var author = _context.Authors.Find(id);
+            if (author != null)
+            {
+                _context.Authors.Remove(author);
+                _context.SaveChanges();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool AuthorExists(int id)
+        {
+            return _context.Authors.Any(e => e.Id == id);
+        }
+    }
+}
