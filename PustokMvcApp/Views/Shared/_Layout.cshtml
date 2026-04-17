@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using PustokMvcApp.Services
+@inject LayoutService layoutService
+@{
+    var settings = layoutService.GetSettings();
+}
+
+
+
+
+<!DOCTYPE html>
 <html lang="zxx">
 
 
@@ -24,7 +33,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 ">
                             <a href="index.html" class="site-brand">
-                                <img src="~/assets/image/logo.png" alt="">
+                                <img src="~/assets/image/@settings["logourl"]" alt="">
                             </a>
                         </div>
                         <div class="col-lg-3">
@@ -34,7 +43,7 @@
                                 </div>
                                 <div class="text">
                                     <p>Free Support 24/7</p>
-                                    <p class="font-weight-bold number">+01-202-555-0181</p>
+                                    <p class="font-weight-bold number">@settings["supportphone"]</p>
                                 </div>
                             </div>
                         </div>
@@ -915,9 +924,7 @@
                         <div class="footer-contact">
                             <p>
                                 <span class="label">Address:</span><span class="text">
-                                    Example Street 98, HH2 BacHa, New
-                                    York,
-                                    USA
+                                    @settings["address"]
                                 </span>
                             </p>
                             <p><span class="label">Phone:</span><span class="text">+18088 234 5678</span></p>

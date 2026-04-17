@@ -1,4 +1,6 @@
-﻿using PustokMvcApp.Models.Common;
+﻿
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using PustokMvcApp.Models.Common;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PustokMvcApp.Models
@@ -7,7 +9,9 @@ namespace PustokMvcApp.Models
     {
         public string Name { get; set; }=null!;
         public string Description { get; set; }=null!;  
+        [Column(TypeName = "decimal(18,2)")]
         public decimal DiscountPercent { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
         public string Code { get; set; }=null!;
         public bool InStock { get; set; }

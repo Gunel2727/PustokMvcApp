@@ -31,7 +31,8 @@ namespace PustokMvcApp.Data.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -59,7 +60,7 @@ namespace PustokMvcApp.Data.Migrations
 
                     b.Property<decimal>("DiscountPercent")
                         .HasPrecision(5, 2)
-                        .HasColumnType("decimal(5,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("HoverImageUrl")
                         .IsRequired()
@@ -129,6 +130,20 @@ namespace PustokMvcApp.Data.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("BookTags");
+                });
+
+            modelBuilder.Entity("PustokMvcApp.Models.Setting", b =>
+                {
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Key");
+
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("PustokMvcApp.Models.Slider", b =>
