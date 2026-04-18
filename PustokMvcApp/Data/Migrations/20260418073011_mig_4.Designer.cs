@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PustokMvcApp.Data;
 
@@ -10,9 +11,11 @@ using PustokMvcApp.Data;
 namespace PustokMvcApp.Data.Migrations
 {
     [DbContext(typeof(PustokAppDbContext))]
-    partial class PustokAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260418073011_mig_4")]
+    partial class mig_4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

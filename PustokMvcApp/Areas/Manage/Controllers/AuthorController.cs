@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PustokMvcApp.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PustokMvcApp.Data;
 using PustokMvcApp.Models;
 
 namespace PustokMvcApp.Areas.Manage.Controllers
@@ -16,22 +17,31 @@ namespace PustokMvcApp.Areas.Manage.Controllers
         }
 
         // POST: Create new author
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("FullName")] Author author)
+        
+       
+        public IActionResult Create()
         {
-            if (ModelState.IsValid)
+           return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Author author)
+        {
+           if(!ModelState.IsValid)
+                return View(author);
+           Author newAuthor= new Author
             {
-                _context.Authors.Add(author);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
-            return RedirectToAction(nameof(Index));
+               Id= author.Id,
+               FullName = author.FullName
+            };
+            _context.Authors.Add(author);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         // POST: Update author
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public IActionResult Edit(int id, [Bind("Id,FullName")] Author author)
         {
             if (id != author.Id)
@@ -52,17 +62,31 @@ namespace PustokMvcApp.Areas.Manage.Controllers
         }
 
         // POST: Delete author
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        [HttpGet]
+       
+        public IActionResult Delete(int id)
         {
             var author = _context.Authors.Find(id);
-            if (author != null)
+            if (author == null)
             {
-                _context.Authors.Remove(author);
-                _context.SaveChanges();
+                return NotFound();
+               
             }
-            return RedirectToAction(nameof(Index));
+            _context.Authors.Remove(author);
+            _context.SaveChanges();
+            return Ok();
+        }
+        [HttpGet]
+        
+        public IActionResult DetailsModal(int id)
+        {
+            var author = _context.Authors.Find(id);
+
+
+            if (author == null)
+                return NotFound();
+
+            return PartialView("_AuthorDetailsModal", author);
         }
     }
 }

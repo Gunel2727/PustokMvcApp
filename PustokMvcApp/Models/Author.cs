@@ -8,7 +8,7 @@ namespace PustokMvcApp.Models
         [Required]
         [MaxLength(30)]
         public string FullName { get; set; } = null!;
-        public List<Book> Books { get; set; }  
+        public List<Book>? Books { get; set; }  
 
     }
 }
