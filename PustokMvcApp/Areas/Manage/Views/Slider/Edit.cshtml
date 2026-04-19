@@ -1,0 +1,56 @@
+﻿@model Slider
+
+<div class="container mt-4">
+    <h2>Edit Slider</h2>
+
+    <form asp-area="Manage" asp-controller="Slider" asp-action="Edit" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="ImageUrl" />
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ButtonText"></label>
+            <input asp-for="ButtonText" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ButtonUrl"></label>
+            <input asp-for="ButtonUrl" class="form-control" />
+        </div>
+
+        <!-- CURRENT IMAGE -->
+        <div class="mb-3">
+            <p>Current Image:</p>
+            <img src="~/assets/image/bg-images/@Model.ImageUrl" width="200" />
+        </div>
+
+        <!-- NEW IMAGE -->
+        <div class="mb-3">
+            <label asp-for="File">New Image (optional)</label>
+            @if(!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <div class="mb-2">
+                    <img src="/assets/image/bg-images/@Model.ImageUrl" width="200" />
+                </div>
+            }
+            <input asp-for="File" type="file" class="form-control" />
+            <span asp-validation-for="File" class="text-danger"></span>
+        </div>
+
+        <button class="btn btn-primary">Update</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+    </form>
+</div>

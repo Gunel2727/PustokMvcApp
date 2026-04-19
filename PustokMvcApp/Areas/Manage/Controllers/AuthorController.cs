@@ -25,40 +25,60 @@ namespace PustokMvcApp.Areas.Manage.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Author author)
         {
            if(!ModelState.IsValid)
                 return View(author);
-           Author newAuthor= new Author
+           if(_context.Authors.Any(a=>a.FullName.ToLower() == author.FullName.ToLower()))
+            {
+                ModelState.AddModelError("FullName", "This author already exists");
+                return View(author);
+            }
+            Author newAuthor= new Author
             {
                Id= author.Id,
                FullName = author.FullName
             };
-            _context.Authors.Add(author);
+            _context.Authors.Add(newAuthor);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
 
         // POST: Update author
-        [HttpPost]
+       
         
-        public IActionResult Edit(int id, [Bind("Id,FullName")] Author author)
+        public IActionResult Edit(int id)
         {
-            if (id != author.Id)
+            var author = _context.Authors.Find(id);
+            if (author == null)
+            {
                 return NotFound();
 
-            if (ModelState.IsValid)
-            {
-                var existingAuthor = _context.Authors.Find(id);
-                if (existingAuthor != null)
-                {
-                    existingAuthor.FullName = author.FullName;
-                    _context.Update(existingAuthor);
-                    _context.SaveChanges();
-                }
-                return RedirectToAction(nameof(Index));
             }
-            return RedirectToAction(nameof(Index));
+            return View(author);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Author author)
+        {
+            if (!ModelState.IsValid)
+                return View(author);
+            var existAuthor = _context.Authors.Find(author.Id);
+            if (existAuthor == null)
+            {
+                return NotFound();
+            }
+            if(_context.Authors.Any(a => a.FullName.ToLower() == author.FullName.ToLower() && a.Id != author.Id))
+            {
+                ModelState.AddModelError("FullName", "This author already exists");
+                return View(author);
+            }
+            existAuthor.FullName = author.FullName;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         // POST: Delete author

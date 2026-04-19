@@ -1,0 +1,41 @@
+﻿@model Author
+
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h5>Edit Author</h5>
+    </div>
+
+    <div class="card-body">
+
+        <form method="post" asp-action="edit">
+
+            <!-- Full Name -->
+            <div class="mb-3">
+                <label asp-for="FullName" class="form-label">Full Name</label>
+                <input asp-for="FullName"
+                       class="form-control"
+                       placeholder="Enter author full name">
+                <span asp-validation-for="FullName" class="text-danger"></span>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">
+                    Update
+                </button>
+
+                <a href="/Manage/Author/Index" class="btn btn-secondary">
+                    Cancel
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

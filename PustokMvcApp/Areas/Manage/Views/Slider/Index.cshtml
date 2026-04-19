@@ -10,9 +10,10 @@
     <h2 class="mb-0 fw-bold">Sliders</h2>
 
     <!-- RIGHT: CREATE BUTTON -->
-    <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#createSection">
-        Create New
-    </button>
+    <a asp-action="Create" class="btn btn-success"
+       data-bs-toggle="collapse" data-bs-target="#createSection">
+        Create
+    </a>
 </div>
 <div class="table-responsive">
     <table class="table table-striped table-hover">
@@ -50,17 +51,23 @@
 
                     <!-- ACTIONS -->
                     <td class="text-center">
-                        <button class="btn btn-sm btn-info" data-bs-toggle="collapse" data-bs-target="#detailsForm@slider.Id">
+                        <!-- DETAILS -->
+                        <a href="@Url.Action("Details", "Slider", new { id = slider.Id })"
+                           class="btn btn-info btn-sm detailsSlider">
                             Details
-                        </button>
+                        </a>
 
-                        <button class="btn btn-sm btn-warning" data-bs-toggle="collapse" data-bs-target="#editForm@slider.Id">
+                        <!-- EDIT -->
+                        <a asp-action="Edit" asp-route-id="@slider.Id" class="btn btn-warning btn-sm"
+                           data-bs-toggle="collapse" data-bs-target="#e@author.Id">
                             Edit
-                        </button>
+                        </a>
 
-                        <button class="btn btn-sm btn-danger" data-bs-toggle="collapse" data-bs-target="#deleteForm@slider.Id">
+                        <!-- DELETE (IMPORTANT PART) -->
+                        <a asp-action="Delete" asp-route-id="@slider.Id" "
+                           class="btn btn-danger btn-sm deleteAuthor">
                             Delete
-                        </button>
+                        </a>
                     </td>
                 </tr>
 
@@ -113,3 +120,8 @@
         </tbody>
     </table>
 </div>
+@section scripts {
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
