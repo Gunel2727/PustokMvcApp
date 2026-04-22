@@ -13,5 +13,17 @@
             return fileName;
 
         }
+        public static bool IsImage(this IFormFile file)
+        {
+
+            return file.ContentType.Contains("image/");
+
+        }
+        public static bool IsValidSize(this IFormFile file, int maxInMb)
+        {
+            return file.Length <= maxInMb * 1024 * 1024;
+        }
     }
+
+    
 }

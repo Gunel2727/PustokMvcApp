@@ -102,6 +102,49 @@ h6 {
   line-height: 1.25;
 }
 
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+    .card-image > img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: block;
+    }
+
+.hover-contents {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.card-image:hover .hover-contents {
+    opacity: 1;
+}
+
+.hover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BU OLMAMALIDIR - problemi yaradır */
+.product-card {
+    position: static; /* və ya position yoxdur - ok */
+}
+
+/* Slick slider bunu override edə bilər */
+.slick-slide {
+    position: relative; /* bu z-index-i qarışdırır */
+}
+
+
+
+
 a,
 span {
   display: inline-block;
@@ -189,6 +232,7 @@ h6 {
 .slick-slide:focus a:focus {
   outline: none;
 }
+
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {

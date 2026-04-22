@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
+using PustokMvcApp.Attributes;
 using PustokMvcApp.Models.Common;
 
 namespace PustokMvcApp.Models
@@ -14,6 +15,8 @@ namespace PustokMvcApp.Models
         public string ButtonText { get; set; }=null!;
         public string ButtonUrl { get; set; }= null!;
         [NotMapped]
+        [FileLength(2)]
+        [FileTypes("image/jpeg", "image/png", "image/jpg")]
         public IFormFile? File { get; set; }
     }
 }

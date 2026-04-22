@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PustokMvcApp.Models;
 
 namespace PustokMvcApp.Data
 {
-    public class PustokAppDbContext:DbContext
+    public class PustokAppDbContext:IdentityDbContext<AppUser>
     {
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Setting> Settings { get; set; }

@@ -1,0 +1,78 @@
+﻿@model PustokMvcApp.ViewModels.UserVm.LoginVm
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb-contents">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Login</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<main class="page-section inner-page-sec-padding-bottom">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 col-md-8">
+
+                <form asp-controller="Account" asp-action="Login" method="post">
+
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="login-form">
+                        <h4 class="login-title">New Customer</h4>
+
+                        <div class="row">
+
+                            <!-- USERNAME -->
+                            <div class="col-md-12 mb--15">
+                                <label asp-for="UsernameOrEmail"></label>
+                                <input asp-for="UsernameOrEmail" class="form-control" placeholder="Enter username">
+                                <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                            </div>
+                            <div class="">
+                                <label asp-for="RememberMe"></label>
+                                <input asp-for="RememberMe" class="" type="checkbox">
+                               
+                            </div>
+
+                            <!-- PASSWORD -->
+                            <div class="col-lg-6 mb--20">
+                                <label asp-for="Password"></label>
+                                <input asp-for="Password" class="form-control" placeholder="Enter password">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                          
+
+                            <!-- SUBMIT -->
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-outlined">
+                                    Login
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</main>
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

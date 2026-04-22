@@ -36,16 +36,7 @@ namespace PustokMvcApp.Areas.Manage.Controllers
             }
 
             var file = slider.File;
-            if (!file.ContentType.Contains("image/"))
-            {
-                ModelState.AddModelError("File", "Please select an image file.");
-                 return View(slider);
-            }
-            if(file.Length > 2 * 1024 * 1024)
-            {
-                ModelState.AddModelError("File", "Image size must be less than 2MB.");
-                return View(slider);
-            }
+          
            
             Slider newSlider= new Slider
             {
@@ -91,16 +82,7 @@ namespace PustokMvcApp.Areas.Manage.Controllers
             if (slider.File != null)
             {
                 var file = slider.File;
-                if(!file.ContentType.Contains("image/"))
-                {
-                    ModelState.AddModelError("File", "Please select an image file.");
-                    return View(slider);
-                }
-                if(file.Length > 2 * 1024 * 1024)
-                {
-                    ModelState.AddModelError("File", "Image size must be less than 2MB.");
-                    return View(slider);
-                }
+                
 
                 if(!string.IsNullOrEmpty(existSlider.ImageUrl))
                 {

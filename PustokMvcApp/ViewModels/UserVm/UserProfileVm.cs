@@ -1,0 +1,17 @@
+﻿namespace PustokMvcApp.ViewModels.UserVm
+{
+    public class UserProfileVm
+    {
+        public UserProfileInfoVm UserInfo { get; set; }
+    }
+    public class UserProfileInfoVm
+    {
+        public string FullName { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string CurrentPassword { get; set; }
+        public string NewPassword { get; set; }
+        public string ConfirmPassword { get; set; }
+
+    }
+}

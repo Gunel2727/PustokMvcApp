@@ -1,0 +1,111 @@
+﻿@model List<Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class="container-fluid">
+
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold text-primary">Books</h2>
+
+        <a href="@Url.Action("Create", "Book")" class="btn btn-success">
+            Create New
+        </a>
+    </div>
+
+    <!-- TABLE CARD -->
+    <div class="card">
+        <div class="card-body">
+
+            @if (Model != null && Model.Count > 0)
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+
+                        <!-- TABLE HEADER -->
+                        <thead class="table-light">
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Author</th>
+                                <th>In Stock</th>
+                                <th>Code</th>
+                                <th>Price</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <!-- TABLE BODY -->
+                        <tbody>
+                            @foreach (var book in Model)
+                            {
+                                <tr>
+                                    <!-- IMAGE -->
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(book.MainImageUrl))
+                                        {
+                                            <img src="@Url.Content("~/assets/image/products/" + book.MainImageUrl)"
+                                                 alt="book image"
+                                                 style="width:70px; height:50px; object-fit:cover; border-radius:5px;" />
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">No Image</span>
+                                        }
+                                    </td>
+
+                                    <!-- NAME -->
+                                    <td>@book.Name</td>
+
+                                    <!-- AUTHOR -->
+                                    <td>@book.Author?.FullName</td>
+
+                                    <!-- INSTOCK -->
+                                    <td>
+                                        @if (book.InStock)
+                                        {
+                                            <span class="badge bg-success">In Stock</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Out</span>
+                                        }
+                                    </td>
+
+                                    <!-- CODE -->
+                                    <td>@book.Code</td>
+
+                                    <!-- PRICE -->
+                                    <td>@book.Price ₼</td>
+
+                                    <!-- ACTIONS -->
+                                    <td class="text-center">
+                                        <a asp-action="Details" asp-route-id="@book.Id"
+                                           class="btn btn-sm btn-info">Details</a>
+
+                                        <a asp-action="Edit" asp-route-id="@book.Id"
+                                           class="btn btn-sm btn-warning">Edit</a>
+
+                                        <a asp-action="Delete" asp-route-id="@book.Id"  
+                                           class="btn btn-sm btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No books found.
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>
