@@ -109,8 +109,9 @@ namespace PustokMvcApp.Controllers
             return RedirectToAction("Index", "Home");
         }
         [Authorize(Roles = "User")]
-        public async Task<IActionResult> UserProfile()
+        public async Task<IActionResult> UserProfile(string tab="dashboard")
         {
+            ViewBag.Tab = tab;
             var user = await userManager.GetUserAsync(User);
            
             var vm = new UserProfileVm
@@ -130,6 +131,7 @@ namespace PustokMvcApp.Controllers
        [Authorize(Roles = "User")]
         public async Task<IActionResult> UserProfile(UserProfileVm vm)
         {
+            ViewBag.Tab ="profile";
             var user = await userManager.GetUserAsync(User);
 
             if (user == null)

@@ -50,7 +50,7 @@
 					<div class="col-lg-9 col-12 mt--30 mt-lg--0">
 						<div class="tab-content" id="myaccountContent">
 							<!-- Single Tab Content Start -->
-							<div class="tab-pane fade show active" id="dashboad" role="tabpanel">
+							<div class="tab-pane fade @(ViewBag.Tab=="dashboard" ? "show active": "")" id="dashboad" role="tabpanel">
 								<div class="myaccount-content">
 									<h3>Dashboard</h3>
 									<div class="welcome mb-20">
@@ -73,7 +73,7 @@
 							</div>
 							<!-- Single Tab Content End -->
 							<!-- Single Tab Content Start -->
-							<div class="tab-pane fade" id="orders" role="tabpanel">
+							<div class="tab-pane fade @(ViewBag.Tab == "orders" ? "show active" : "")" id="orders" role="tabpanel">
 								<div class="myaccount-content">
 									<h3>Orders</h3>
 									<div class="myaccount-table table-responsive text-center">
@@ -180,7 +180,7 @@
 							</div>
 							<!-- Single Tab Content End -->
 							<!-- Single Tab Content Start -->
-							<div class="tab-pane fade" id="account-info" role="tabpanel">
+							<div class="tab-pane fade @(ViewBag.Tab == "profile" ? "show active" : "")" id="account-info" role="tabpanel">
 								<div class="myaccount-content">
 									<h3>Account Details</h3>
 									<div class="account-details-form">
