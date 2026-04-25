@@ -52,5 +52,15 @@ $(document).ready(function () {
             })
             .catch(err => console.error('Error loading modal content:', err));
     });
+    $(".addbasket").click(function (e) {
+        e.preventDefault();
+        let url = $(this).attr("href");
+        fetch(url)
+            .then(res => res.text())
+            .then(html => {
+                $(".cart-dropdown-block").append(html); 
+            })
+    }
+    )
 
 });

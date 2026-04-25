@@ -17,133 +17,137 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PustokMvcApp
 build_property.RootNamespace = PustokMvcApp
-build_property.ProjectDir = C:\Users\gunel\OneDrive\Desktop\PustokMvcApp\PustokMvcApp\
+build_property.ProjectDir = C:\Users\gunel\OneDrive\Desktop\PustokMVC-2\PustokMvcApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gunel\OneDrive\Desktop\PustokMvcApp\PustokMvcApp
+build_property.MSBuildProjectDirectory = C:\Users\gunel\OneDrive\Desktop\PustokMVC-2\PustokMvcApp
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/AdminAccount/Login.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/AdminAccount/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Author/Create.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Author/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEF1dGhvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Author/Details.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Author/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEF1dGhvclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Author/Edit.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Author/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEF1dGhvclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Author/Index.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Author/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEF1dGhvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Author/_AuthorDetailsModal.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Author/_AuthorDetailsModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEF1dGhvclxfQXV0aG9yRGV0YWlsc01vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Book/Create.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Book/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJvb2tcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Book/Edit.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Book/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJvb2tcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Book/Index.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Book/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJvb2tcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Dashboard/Index.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Slider/Create.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Slider/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Slider/Edit.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Slider/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/Slider/Index.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/_ViewImports.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Areas/Manage/Views/_ViewStart.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Areas/Manage/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Account/Login.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Account/Register.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Account/UserProfile.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Account/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Books/Detail.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Books/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Home/Index.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Home/Privacy.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Shared/Error.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Shared/_BookModalPartial.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Shared/_BasketPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXNrZXRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Shared/_BookModalPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29rTW9kYWxQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Shared/_BooksPartialView.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Shared/_BooksPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29rc1BhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/_ViewImports.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/_ViewStart.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gunel/OneDrive/Desktop/PustokMvcApp/PustokMvcApp/Views/Shared/_Layout.cshtml]
+[C:/Users/gunel/OneDrive/Desktop/PustokMVC-2/PustokMvcApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ycx2hasjqc
